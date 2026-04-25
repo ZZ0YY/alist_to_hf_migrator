@@ -17,7 +17,7 @@ target_compile_definitions(${BINARY_NAME} PRIVATE "FLUTTER_VERSION_MINOR=0")
 target_compile_definitions(${BINARY_NAME} PRIVATE "FLUTTER_VERSION_PATCH=0")
 target_compile_definitions(${BINARY_NAME} PRIVATE "FLUTTER_VERSION_BUILD=1")
 
-target_compile_options(${BINARY_NAME} PRIVATE /W4 /WX /wd"4100")
+target_compile_options(${BINARY_NAME} PRIVATE /W4 /wd"4100" /wd"4101" /wd"4996")
 target_link_options(${BINARY_NAME} PRIVATE /ENTRY:wWinMainCRTStartup)
 
 target_link_libraries(${BINARY_NAME} PRIVATE flutter flutter_wrapper_app)
