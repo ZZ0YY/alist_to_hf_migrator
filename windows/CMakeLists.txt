@@ -12,12 +12,5 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/bin")
 
-set(FLUTTER_MANAGED_DIR "${CMAKE_CURRENT_SOURCE_DIR}/flutter")
-
+add_subdirectory("flutter")
 add_subdirectory("runner")
-
-add_custom_target(install_bundle ALL
-  COMMAND ${CMAKE_COMMAND} -E copy_directory
-    "${PROJECT_SOURCE_DIR}/flutter"
-    "${CMAKE_BINARY_DIR}/flutter"
-)

@@ -34,6 +34,12 @@ dependencies:
   # Isolate for concurrent tasks
   isolate_manager: ^2.0.0
 
+dependency_overrides:
+  # Pin to version that does NOT reference flutter.compileSdkVersion
+  # in its Android build.gradle (9.x requires Flutter >=3.24 + plugin-loader
+  # injection that fails on some CI runners).
+  package_info_plus: "4.2.0"
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
