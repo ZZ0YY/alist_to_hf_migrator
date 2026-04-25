@@ -1,0 +1,41 @@
+#include <windows.h>
+
+IDI_ICON1               ICON    DISCARDABLE     "resources\\app_icon.ico"
+
+#define RT_MANIFEST 24
+#if defined(_WIN32) && !defined(_WIN64)
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "runner.exe.manifest"
+#endif
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILEFLAGSMASK  VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+  FILEFLAGS VS_FF_DEBUG
+#else
+  FILEFLAGS 0x0L
+#endif
+FILEOS        VOS_NT_WINDOWS32
+FILETYPE      VFT_APP
+FILESUBTYPE   VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName", "com.alisthf.migrator"
+            VALUE "FileDescription", "AList to HuggingFace Migrator"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "alist_to_hf_migrator"
+            VALUE "LegalCopyright", "Copyright (C) 2024"
+            VALUE "OriginalFilename", "alist_to_hf_migrator.exe"
+            VALUE "ProductName", "AList to HuggingFace Migrator"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1252
+    END
+END

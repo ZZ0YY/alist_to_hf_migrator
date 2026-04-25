@@ -1,0 +1,43 @@
+name: alist_to_hf_migrator
+description: Alist to HuggingFace cross-platform file migration tool
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Local database
+  sqflite: ^2.3.0
+  sqflite_common_ffi: ^2.3.0
+  path: ^1.9.0
+  path_provider: ^2.1.1
+  # HTTP
+  dio: ^5.4.0
+  # State management
+  provider: ^6.1.1
+  # UI
+  material_color_utilities: ^0.11.1
+  # Platform
+  window_manager: ^0.4.0
+  wakelock_plus: ^1.2.2
+  # Utils
+  crypto: ^3.0.3
+  uuid: ^4.3.3
+  mime: ^1.0.5
+  shared_preferences: ^2.2.2
+  url_launcher: ^6.2.4
+  clipboard: ^0.1.3
+  intl: ^0.19.0
+  # Isolate for concurrent tasks
+  isolate_manager: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
